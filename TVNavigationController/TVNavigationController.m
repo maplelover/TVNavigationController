@@ -121,28 +121,28 @@
     {
         self.barTransparent = YES;
         
-        CGRect frame = self.navigationBar.frame;
-        frame.size.height += frame.origin.y;
-        frame.origin.y = 0;
-        TVNavigationBar *temporaryNavigationBar = [[TVNavigationBar alloc] initWithFrame:frame];
-        temporaryNavigationBar.barStyle = self.navigationBar.barStyle;
-        
         UIViewController *opaqueViewController = originalTransparent ? currentViewController : prevViewController;
-        [opaqueViewController.view addSubview:temporaryNavigationBar];
+        TVNavigationBar *fakeNavigationBar = [self createFakeNavigationBar];
+        [opaqueViewController.view addSubview:fakeNavigationBar];
         
         [self.transitionCoordinator animateAlongsideTransition:^(id<UIViewControllerTransitionCoordinatorContext>  _Nonnull context) {
-//            self.navigationBar.tintColor = [UIColor redColor];
-//            
-//            self.navigationBar.titleTextAttributes = @{
-//                                                       NSForegroundColorAttributeName: [UIColor redColor]
-//                                                       };
+            //TODO: 独立控制导航栏前景、背景色
             
         } completion:^(id<UIViewControllerTransitionCoordinatorContext>  _Nonnull context) {
+            [fakeNavigationBar removeFromSuperview];
             self.barTransparent = [self.topViewController isNavigationBarTransparent];
-            
-            [temporaryNavigationBar removeFromSuperview];
         }];
     }
+}
+
+- (TVNavigationBar *)createFakeNavigationBar
+{
+    CGRect frame = self.navigationBar.frame;
+    frame.size.height += frame.origin.y;
+    frame.origin.y = 0;
+    TVNavigationBar *navigationBar = [[TVNavigationBar alloc] initWithFrame:frame];
+    navigationBar.barStyle = self.navigationBar.barStyle;
+    return navigationBar;
 }
 
 @end
