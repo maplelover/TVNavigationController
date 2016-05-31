@@ -44,7 +44,7 @@
         <!--微信红包-->
         <scene sceneID="OUX-Rt-8yO">
             <objects>
-                <tableViewController id="DKk-4o-jK1" sceneMemberID="viewController">
+                <tableViewController id="DKk-4o-jK1" customClass="LuckyMoneyViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="d3n-q0-ccy">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -72,11 +72,43 @@
                                                         <constraint firstAttribute="width" constant="168" id="oQT-a4-ZDr"/>
                                                     </constraints>
                                                 </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p7f-n6-3uO">
+                                                    <rect key="frame" x="265" y="28" width="70" height="29"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <state key="normal" title="无动画出栈">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="popWithoutAnimation:" destination="DKk-4o-jK1" eventType="touchUpInside" id="gZ2-7z-Nte"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rHf-Sv-i5c">
+                                                    <rect key="frame" x="265" y="65" width="70" height="29"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <state key="normal" title="无动画入栈">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="pushWithoutAnimation:" destination="DKk-4o-jK1" eventType="touchUpInside" id="KJ7-gU-gFQ"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="rHf-Sv-i5c" secondAttribute="trailing" constant="10" id="41t-DH-c06"/>
                                                 <constraint firstItem="Zbb-T5-GwT" firstAttribute="centerY" secondItem="1kp-U7-fhl" secondAttribute="centerY" id="Fai-OT-YdN"/>
                                                 <constraint firstItem="Zbb-T5-GwT" firstAttribute="centerX" secondItem="1kp-U7-fhl" secondAttribute="centerX" id="QOi-7X-LZu"/>
+                                                <constraint firstItem="p7f-n6-3uO" firstAttribute="top" secondItem="1kp-U7-fhl" secondAttribute="topMargin" constant="20" id="Sye-ZW-ciV"/>
+                                                <constraint firstItem="rHf-Sv-i5c" firstAttribute="top" secondItem="p7f-n6-3uO" secondAttribute="bottom" constant="8" id="cNL-Ih-J8l"/>
+                                                <constraint firstItem="p7f-n6-3uO" firstAttribute="centerX" secondItem="Zbb-T5-GwT" secondAttribute="centerX" id="lx6-6N-Ucf"/>
+                                                <constraint firstItem="p7f-n6-3uO" firstAttribute="leading" secondItem="rHf-Sv-i5c" secondAttribute="leading" id="ts0-QX-Qz5"/>
+                                                <constraint firstAttribute="trailing" secondItem="p7f-n6-3uO" secondAttribute="trailing" constant="10" id="uf7-Xw-tMB"/>
                                             </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="uf7-Xw-tMB"/>
+                                                    <exclude reference="41t-DH-c06"/>
+                                                </mask>
+                                            </variation>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
