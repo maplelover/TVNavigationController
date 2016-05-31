@@ -51,17 +51,16 @@
     {
         _barTransparent = barTransparent;
         
-        TVNavigationBar *navigationBar = (TVNavigationBar *)self.navigationBar;
         if (barTransparent)
         {
             UIImage *emptyImage = [[UIImage alloc] init];
-            [navigationBar setBackgroundImage:emptyImage forBarMetrics:UIBarMetricsDefault];
-            navigationBar.shadowLineView.hidden = YES;
+            [self.navigationBar setBackgroundImage:emptyImage forBarMetrics:UIBarMetricsDefault];
+            self.navigationBar.shadowImage = emptyImage;
         }
         else
         {
-            [navigationBar setBackgroundImage:nil forBarMetrics:UIBarMetricsDefault];
-            navigationBar.shadowLineView.hidden = NO;
+            [self.navigationBar setBackgroundImage:nil forBarMetrics:UIBarMetricsDefault];
+            self.navigationBar.shadowImage = nil;
         }
     }
 }
@@ -124,7 +123,7 @@
             self.barTransparent = YES;
             
             UIViewController *opaqueViewController = originalTransparent ? currentViewController : prevViewController;
-            TVNavigationBar *fakeNavigationBar = [self createFakeNavigationBar];
+            UIView *fakeNavigationBar = [self createFakeNavigationBar];
             [opaqueViewController.view addSubview:fakeNavigationBar];
             
             [self.transitionCoordinator animateAlongsideTransition:^(id<UIViewControllerTransitionCoordinatorContext>  _Nonnull context) {
@@ -149,6 +148,16 @@
     frame.origin.y = 0;
     TVNavigationBar *navigationBar = [[TVNavigationBar alloc] initWithFrame:frame];
     navigationBar.barStyle = self.navigationBar.barStyle;
+    
+    if ([self.navigationBar isKindOfClass:TVNavigationBar.class])
+    {
+        UIColor *shadowColor = [(TVNavigationBar *)self.navigationBar shadowColor];
+        if (shadowColor)
+        {
+            navigationBar.shadowColor = shadowColor;
+        }
+    }
+    
     return navigationBar;
 }
 

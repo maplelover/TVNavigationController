@@ -11,6 +11,5 @@
 @interface TVNavigationBar : UINavigationBar
 
 @property (nonatomic, strong) IBInspectable UIColor *shadowColor; ///< 底部部阴影线颜色
-@property (nonatomic, strong, readonly) UIView *shadowLineView;
 
 @end

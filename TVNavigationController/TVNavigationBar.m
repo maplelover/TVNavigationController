@@ -7,61 +7,24 @@
 //
 
 #import "TVNavigationBar.h"
+#import "UINavigationBar+ShadowView.h"
 
 @interface TVNavigationBar ()
 
-@property (nonatomic, strong) UIView *bottomLine;
+@property (nonatomic, strong) UIView *shadowView;
 
 @end
 
 @implementation TVNavigationBar
-@synthesize shadowColor = _shadowColor;
 
-- (UIView *)findBottomLineWithSuperview:(UIView *)superview
+- (UIView *)shadowView
 {
-    UIView *ret = nil;
-    for (UIView *subview in superview.subviews)
+    if (!_shadowView)
     {
-        if (subview.frame.origin.y >= superview.frame.size.height
-            && subview.frame.size.height < 1
-            && [subview isKindOfClass:[UIImageView class]])
-        {
-            ret = subview;
-            break;
-        }
-    }
-    return ret;
-}
-
-- (UIView *)shadowLineView
-{
-    if (!_bottomLine)
-    {
-        for (UIView *subview in self.subviews)
-        {
-            if (subview.frame.size.width == self.frame.size.width)
-            {
-                _bottomLine = [self findBottomLineWithSuperview:subview];
-                if (_bottomLine)
-                {
-                    break;
-                }
-            }
-        }
-        
-        NSAssert(_bottomLine, @"View hierarchy changed?");
+        _shadowView = [self findShadowView];
     }
     
-    return _bottomLine;
-}
-
-- (UIColor *)shadowColor
-{
-    if (!_shadowColor)
-    {
-        _shadowColor = [UIColor clearColor];
-    }
-    return _shadowColor;
+    return _shadowView;
 }
 
 - (void)setShadowColor:(UIColor *)shadowColor
@@ -69,21 +32,17 @@
     if (_shadowColor != shadowColor)
     {
         _shadowColor = shadowColor;
-        [self updateShadowColor];
+        [self setNeedsLayout];
     }
 }
 
 - (void)layoutSubviews
 {
     [super layoutSubviews];
-    [self updateShadowColor];
-}
-
-- (void)updateShadowColor
-{
+    
     if (_shadowColor)
     {
-        self.shadowLineView.backgroundColor = self.shadowColor;
+        self.shadowView.backgroundColor = _shadowColor;
     }
 }
 

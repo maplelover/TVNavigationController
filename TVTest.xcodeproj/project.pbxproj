@@ -14,6 +14,7 @@
 		794BD3751CFBD4A0000A6D12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 794BD3741CFBD4A0000A6D12 /* Assets.xcassets */; };
 		794BD3781CFBD4A0000A6D12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 794BD3761CFBD4A0000A6D12 /* LaunchScreen.storyboard */; };
 		796E99821CFD1FF0001DAE9C /* LuckyMoneyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 796E99811CFD1FF0001DAE9C /* LuckyMoneyViewController.m */; };
+		796E99881CFD2D12001DAE9C /* UINavigationBar+ShadowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 796E99871CFD2D12001DAE9C /* UINavigationBar+ShadowView.m */; };
 		7989E4911CFD193400A01180 /* TVNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 7989E48C1CFD193400A01180 /* TVNavigationBar.m */; };
 		7989E4921CFD193400A01180 /* TVNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7989E48E1CFD193400A01180 /* TVNavigationController.m */; };
 		7989E4931CFD193400A01180 /* UIViewController+TVNavigationBarStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 7989E4901CFD193400A01180 /* UIViewController+TVNavigationBarStyle.m */; };
@@ -32,6 +33,8 @@
 		794BD3791CFBD4A0000A6D12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		796E99801CFD1FF0001DAE9C /* LuckyMoneyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LuckyMoneyViewController.h; sourceTree = "<group>"; };
 		796E99811CFD1FF0001DAE9C /* LuckyMoneyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LuckyMoneyViewController.m; sourceTree = "<group>"; };
+		796E99861CFD2D12001DAE9C /* UINavigationBar+ShadowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+ShadowView.h"; sourceTree = "<group>"; };
+		796E99871CFD2D12001DAE9C /* UINavigationBar+ShadowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+ShadowView.m"; sourceTree = "<group>"; };
 		7989E48B1CFD193400A01180 /* TVNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TVNavigationBar.h; sourceTree = "<group>"; };
 		7989E48C1CFD193400A01180 /* TVNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TVNavigationBar.m; sourceTree = "<group>"; };
 		7989E48D1CFD193400A01180 /* TVNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TVNavigationController.h; sourceTree = "<group>"; };
@@ -97,10 +100,12 @@
 		7989E48A1CFD193400A01180 /* TVNavigationController */ = {
 			isa = PBXGroup;
 			children = (
-				7989E48B1CFD193400A01180 /* TVNavigationBar.h */,
-				7989E48C1CFD193400A01180 /* TVNavigationBar.m */,
 				7989E48D1CFD193400A01180 /* TVNavigationController.h */,
 				7989E48E1CFD193400A01180 /* TVNavigationController.m */,
+				7989E48B1CFD193400A01180 /* TVNavigationBar.h */,
+				7989E48C1CFD193400A01180 /* TVNavigationBar.m */,
+				796E99861CFD2D12001DAE9C /* UINavigationBar+ShadowView.h */,
+				796E99871CFD2D12001DAE9C /* UINavigationBar+ShadowView.m */,
 				7989E48F1CFD193400A01180 /* UIViewController+TVNavigationBarStyle.h */,
 				7989E4901CFD193400A01180 /* UIViewController+TVNavigationBarStyle.m */,
 			);
@@ -183,6 +188,7 @@
 				794BD36D1CFBD4A0000A6D12 /* AppDelegate.m in Sources */,
 				794BD36A1CFBD4A0000A6D12 /* main.m in Sources */,
 				7989E4911CFD193400A01180 /* TVNavigationBar.m in Sources */,
+				796E99881CFD2D12001DAE9C /* UINavigationBar+ShadowView.m in Sources */,
 				796E99821CFD1FF0001DAE9C /* LuckyMoneyViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
