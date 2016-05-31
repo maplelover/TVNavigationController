@@ -119,19 +119,26 @@
     BOOL currentTransparent = [currentViewController isNavigationBarTransparent];
     if (originalTransparent != currentTransparent)
     {
-        self.barTransparent = YES;
-        
-        UIViewController *opaqueViewController = originalTransparent ? currentViewController : prevViewController;
-        TVNavigationBar *fakeNavigationBar = [self createFakeNavigationBar];
-        [opaqueViewController.view addSubview:fakeNavigationBar];
-        
-        [self.transitionCoordinator animateAlongsideTransition:^(id<UIViewControllerTransitionCoordinatorContext>  _Nonnull context) {
-            //TODO: 独立控制导航栏前景、背景色
+        if (self.transitionCoordinator)
+        {
+            self.barTransparent = YES;
             
-        } completion:^(id<UIViewControllerTransitionCoordinatorContext>  _Nonnull context) {
-            [fakeNavigationBar removeFromSuperview];
-            self.barTransparent = [self.topViewController isNavigationBarTransparent];
-        }];
+            UIViewController *opaqueViewController = originalTransparent ? currentViewController : prevViewController;
+            TVNavigationBar *fakeNavigationBar = [self createFakeNavigationBar];
+            [opaqueViewController.view addSubview:fakeNavigationBar];
+            
+            [self.transitionCoordinator animateAlongsideTransition:^(id<UIViewControllerTransitionCoordinatorContext>  _Nonnull context) {
+                //TODO: 独立控制导航栏前景、背景色
+                
+            } completion:^(id<UIViewControllerTransitionCoordinatorContext>  _Nonnull context) {
+                [fakeNavigationBar removeFromSuperview];
+                self.barTransparent = [context isCancelled] ? originalTransparent : currentTransparent;
+            }];
+        }
+        else
+        {
+            self.barTransparent = currentTransparent;
+        }
     }
 }
 
