@@ -13,9 +13,9 @@
 		794BD3731CFBD4A0000A6D12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 794BD3711CFBD4A0000A6D12 /* Main.storyboard */; };
 		794BD3751CFBD4A0000A6D12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 794BD3741CFBD4A0000A6D12 /* Assets.xcassets */; };
 		794BD3781CFBD4A0000A6D12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 794BD3761CFBD4A0000A6D12 /* LaunchScreen.storyboard */; };
-		794BD39B1CFC33BD000A6D12 /* TVNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 794BD3961CFC33BD000A6D12 /* TVNavigationBar.m */; };
-		794BD39C1CFC33BD000A6D12 /* TVNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 794BD3981CFC33BD000A6D12 /* TVNavigationController.m */; };
-		794BD39D1CFC33BD000A6D12 /* UIViewController+TVNavigationBarStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 794BD39A1CFC33BD000A6D12 /* UIViewController+TVNavigationBarStyle.m */; };
+		7989E4911CFD193400A01180 /* TVNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 7989E48C1CFD193400A01180 /* TVNavigationBar.m */; };
+		7989E4921CFD193400A01180 /* TVNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7989E48E1CFD193400A01180 /* TVNavigationController.m */; };
+		7989E4931CFD193400A01180 /* UIViewController+TVNavigationBarStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 7989E4901CFD193400A01180 /* UIViewController+TVNavigationBarStyle.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,12 +29,12 @@
 		794BD3741CFBD4A0000A6D12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		794BD3771CFBD4A0000A6D12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		794BD3791CFBD4A0000A6D12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		794BD3951CFC33BD000A6D12 /* TVNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TVNavigationBar.h; sourceTree = "<group>"; };
-		794BD3961CFC33BD000A6D12 /* TVNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TVNavigationBar.m; sourceTree = "<group>"; };
-		794BD3971CFC33BD000A6D12 /* TVNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TVNavigationController.h; sourceTree = "<group>"; };
-		794BD3981CFC33BD000A6D12 /* TVNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TVNavigationController.m; sourceTree = "<group>"; };
-		794BD3991CFC33BD000A6D12 /* UIViewController+TVNavigationBarStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+TVNavigationBarStyle.h"; sourceTree = "<group>"; };
-		794BD39A1CFC33BD000A6D12 /* UIViewController+TVNavigationBarStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+TVNavigationBarStyle.m"; sourceTree = "<group>"; };
+		7989E48B1CFD193400A01180 /* TVNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TVNavigationBar.h; sourceTree = "<group>"; };
+		7989E48C1CFD193400A01180 /* TVNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TVNavigationBar.m; sourceTree = "<group>"; };
+		7989E48D1CFD193400A01180 /* TVNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TVNavigationController.h; sourceTree = "<group>"; };
+		7989E48E1CFD193400A01180 /* TVNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TVNavigationController.m; sourceTree = "<group>"; };
+		7989E48F1CFD193400A01180 /* UIViewController+TVNavigationBarStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+TVNavigationBarStyle.h"; sourceTree = "<group>"; };
+		7989E4901CFD193400A01180 /* UIViewController+TVNavigationBarStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+TVNavigationBarStyle.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,7 +67,7 @@
 		794BD3671CFBD4A0000A6D12 /* TVTest */ = {
 			isa = PBXGroup;
 			children = (
-				794BD3941CFC33BD000A6D12 /* TVNavigationController */,
+				7989E48A1CFD193400A01180 /* TVNavigationController */,
 				794BD36B1CFBD4A0000A6D12 /* AppDelegate.h */,
 				794BD36C1CFBD4A0000A6D12 /* AppDelegate.m */,
 				794BD36E1CFBD4A0000A6D12 /* ViewController.h */,
@@ -89,18 +89,18 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		794BD3941CFC33BD000A6D12 /* TVNavigationController */ = {
+		7989E48A1CFD193400A01180 /* TVNavigationController */ = {
 			isa = PBXGroup;
 			children = (
-				794BD3951CFC33BD000A6D12 /* TVNavigationBar.h */,
-				794BD3961CFC33BD000A6D12 /* TVNavigationBar.m */,
-				794BD3971CFC33BD000A6D12 /* TVNavigationController.h */,
-				794BD3981CFC33BD000A6D12 /* TVNavigationController.m */,
-				794BD3991CFC33BD000A6D12 /* UIViewController+TVNavigationBarStyle.h */,
-				794BD39A1CFC33BD000A6D12 /* UIViewController+TVNavigationBarStyle.m */,
+				7989E48B1CFD193400A01180 /* TVNavigationBar.h */,
+				7989E48C1CFD193400A01180 /* TVNavigationBar.m */,
+				7989E48D1CFD193400A01180 /* TVNavigationController.h */,
+				7989E48E1CFD193400A01180 /* TVNavigationController.m */,
+				7989E48F1CFD193400A01180 /* UIViewController+TVNavigationBarStyle.h */,
+				7989E4901CFD193400A01180 /* UIViewController+TVNavigationBarStyle.m */,
 			);
 			path = TVNavigationController;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -172,12 +172,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				794BD39B1CFC33BD000A6D12 /* TVNavigationBar.m in Sources */,
-				794BD39C1CFC33BD000A6D12 /* TVNavigationController.m in Sources */,
+				7989E4931CFD193400A01180 /* UIViewController+TVNavigationBarStyle.m in Sources */,
 				794BD3701CFBD4A0000A6D12 /* ViewController.m in Sources */,
+				7989E4921CFD193400A01180 /* TVNavigationController.m in Sources */,
 				794BD36D1CFBD4A0000A6D12 /* AppDelegate.m in Sources */,
-				794BD39D1CFC33BD000A6D12 /* UIViewController+TVNavigationBarStyle.m in Sources */,
 				794BD36A1CFBD4A0000A6D12 /* main.m in Sources */,
+				7989E4911CFD193400A01180 /* TVNavigationBar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,6 +330,7 @@
 				794BD37E1CFBD4A0000A6D12 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
