@@ -7,7 +7,7 @@
 //
 
 #import "LuckyMoneyViewController.h"
-#import "UIViewController+TVNavigationBarStyle.h"
+#import "UIViewController+NavigationBarStyle.h"
 
 @implementation LuckyMoneyViewController
 

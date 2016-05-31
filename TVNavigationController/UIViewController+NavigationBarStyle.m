@@ -1,19 +1,19 @@
 //
-//  UIViewController+TVNavigationBarStyle.m
+//  UIViewController+NavigationBarStyle.m
 //  TVTest
 //
-//  Created by zhoujinrui on 16/5/30.
+//  Created by zhoujinrui on 16/5/31.
 //  Copyright © 2016年 zhoujinrui. All rights reserved.
 //
 
-#import "UIViewController+TVNavigationBarStyle.h"
+#import "UIViewController+NavigationBarStyle.h"
 #import <objc/runtime.h>
 
 static char const * kNavigationBarStyleKey      = 0;
 static char const * kNavigationBarColorKey      = 0;
 static char const * kNavigationBarTintColorKey  = 0;
 
-@implementation UIViewController (TVNavigationBarStyle)
+@implementation UIViewController (NavigationBarStyle)
 
 - (BOOL)isNavigationBarTransparent
 {

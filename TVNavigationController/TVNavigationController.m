@@ -8,6 +8,7 @@
 
 #import "TVNavigationController.h"
 #import "TVNavigationBar.h"
+#import "UIViewController+NavigationBarStyle.h"
 
 @interface TVNavigationController ()
 
