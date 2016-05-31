@@ -126,7 +126,7 @@
         [opaqueViewController.view addSubview:fakeNavigationBar];
         
         [self.transitionCoordinator animateAlongsideTransition:^(id<UIViewControllerTransitionCoordinatorContext>  _Nonnull context) {
-            //TODO: 独立控制导航栏前景、背景色 
+            //TODO: 独立控制导航栏前景、背景色
             
         } completion:^(id<UIViewControllerTransitionCoordinatorContext>  _Nonnull context) {
             [fakeNavigationBar removeFromSuperview];
